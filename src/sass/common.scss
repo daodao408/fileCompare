@@ -1,0 +1,614 @@
+// 表格container
+.ivu-table-wrapper {
+    border: none;
+    // height: calc(100% - 72px - 24px - 48px - 40px - 40px - 24px - 50px);
+    &.compare-file-table {
+        .ivu-table {
+            height: 100%;
+            background-color: transparent;
+            &::before {
+                background-color: transparent;
+            }
+            &::after {
+                background-color: transparent;
+            }
+            &.ivu-table-stripe {
+                .ivu-table-body {
+                    tr {
+                        &:nth-child(2n) {
+                            td {
+                                background-color: rgba(255, 255, 255, 0.06);
+                            }
+                        }
+                    }
+                }
+            }
+            .ivu-table-header {
+                th {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-bottom: none;
+                    color: rgba(255, 255, 255, 0.85);
+                }
+            }
+            .ivu-table-body {
+                .ivu-table-tbody {
+                    tr {
+                        td {
+                            color: rgba(255, 255, 255, 0.65);
+                            background-color: transparent;
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            .ivu-table-tip {
+                table {
+                    tbody {
+                        tr {
+                            td {
+                                color: rgba(255, 255, 255, 0.65);
+                                background-color: rgba(255, 255, 255, 0.03);
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ivu-spin-fix {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+
+.table-pagination-container {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    .table-pagination-text {
+        float: left;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 14px;
+    }
+    .table-pagination-content {
+        &.ivu-page {
+            float: right;
+            .ivu-page-prev {
+                background-color: rgba(255, 255, 255, 0.2);
+                border: none;
+                a {
+                    i {
+                        color: rgba(255, 255, 255, 0.85);
+                    }
+                }
+                &.ivu-page-disabled {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    a {
+                        i {
+                            color: rgba(255, 255, 255, 0.2);
+                        }
+                    }
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.2);
+                    }
+                }
+                &:hover {
+                    background-color: #1890ff;
+                }
+            }
+            .ivu-page-next {
+                background-color: rgba(255, 255, 255, 0.2);
+                border: none;
+                a {
+                    i {
+                        color: rgba(255, 255, 255, 0.85);
+                    }
+                }
+                &.ivu-page-disabled {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    a {
+                        i {
+                            color: rgba(255, 255, 255, 0.2);
+                        }
+                    }
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.2);
+                    }
+                }
+                &:hover {
+                    background-color: #1890ff;
+                }
+            }
+            .ivu-page-item {
+                background-color: rgba(255, 255, 255, 0.2);
+                border: none;
+                &.ivu-page-item-active {
+                    background-color: #1890ff;
+                    border: 1px solid #1890ff;
+                }
+                &:hover {
+                    background-color: #1890ff;
+                }
+                a {
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.85);
+                }
+            }
+            .ivu-page-options {
+                .ivu-page-options-sizer {
+                    .ivu-select {
+                        color: rgba(255, 255, 255, 0.85);
+                        &.ivu-select-visible {
+                            .ivu-select-selection {
+                                background-color: #1890ff;
+                                .ivu-select-arrow {
+                                    color: rgba(255, 255, 255, 0.85);
+                                }
+                            }
+                        }
+                        .ivu-select-selection {
+                            background-color: rgba(255, 255, 255, 0.2);
+                            border: none;
+                            &:hover {
+                                background-color: #1890ff;
+                                .ivu-select-arrow {
+                                    color: rgba(255, 255, 255, 0.85);
+                                }
+                            }
+                        }
+                        .ivu-select-dropdown {
+                            padding: 0;
+                            background-color: #242e47;
+                            box-shadow: 0px 2px 8px rgba(12, 22, 51, 0.35);
+                            color: rgba(255, 255, 255, 0.85);
+                            .ivu-select-dropdown-list {
+                                .ivu-select-item {
+                                    color: rgba(255, 255, 255, 0.85);
+                                    &.ivu-select-item-selected {
+                                        background-color: #1890ff;
+                                        color: rgba(255, 255, 255, 0.85);
+                                    }
+                                    &:hover {
+                                        background-color: #1890ff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .ivu-table-wrapper {
+        &.compare-file-table {
+            .ivu-table {
+                &.ivu-table-stripe {
+                    .ivu-table-body {
+                        tr {
+                            &:nth-child(2n) {
+                                td {
+                                    height: 42px;
+                                    line-height: 42px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ivu-table-header {
+                    th {
+                        height: 42px;
+                    }
+                }
+                .ivu-table-body {
+                    .ivu-table-tbody {
+                        tr {
+                            td {
+                                height: 42px;
+                                line-height: 42px;
+                                .ivu-table-cell {
+                                    div {
+                                        height: 42px;
+                                        line-height: 42px;
+                                        span {
+                                            height: 42px;
+                                            line-height: 42px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .ivu-table-tip {
+                    height: 420px;
+                    table {
+                        tbody {
+                            tr {
+                                td {
+                                    height: 420px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ivu-spin-fix {
+                height: 420px;
+            }
+        }
+    }
+    .compare-btn-container {
+        .pre-step-btn {
+            display: inline-block;
+            width: 120px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 12px;
+            cursor: pointer;
+            background: url('../assets/images/bg-btn-pre-nor.png') no-repeat;
+            &:hover {
+                background: url('../assets/images/bg-btn-pre-in.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            background-size: 100% 100%;
+            margin-right: 30px;
+        }
+        .next-step-btn {
+            display: inline-block;
+            width: 120px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            cursor: pointer;
+            background: url('../assets/images/bg-btn-next-nor.png') no-repeat;
+            background-size: 100% 100%;
+            &:hover {
+                background: url('../assets/images/bg-btn-next-in.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            &.step-btn-disable {
+                background: url('../assets/images/bg-btn-next-disable.png') center center no-repeat;
+                background-size: 100% 100%;
+                cursor: not-allowed;
+                &:hover {
+                    background: url('../assets/images/bg-btn-next-disable.png') center center no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .ivu-table-wrapper {
+        &.compare-file-table {
+            .ivu-table {
+                &.ivu-table-stripe {
+                    .ivu-table-body {
+                        tr {
+                            &:nth-child(2n) {
+                                td {
+                                    height: 42px;
+                                    line-height: 42px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ivu-table-header {
+                    th {
+                        height: 42px;
+                    }
+                }
+                .ivu-table-body {
+                    .ivu-table-tbody {
+                        tr {
+                            td {
+                                height: 42px;
+                                line-height: 42px;
+                                .ivu-table-cell {
+                                    div {
+                                        height: 42px;
+                                        line-height: 42px;
+                                        span {
+                                            height: 42px;
+                                            line-height: 42px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .ivu-table-tip {
+                    height: 420px;
+                    table {
+                        tbody {
+                            tr {
+                                td {
+                                    height: 420px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ivu-spin-fix {
+                height: 420px;
+            }
+        }
+    }
+    .compare-btn-container {
+        .pre-step-btn {
+            display: inline-block;
+            width: 120px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            cursor: pointer;
+            background: url('../assets/images/bg-btn-pre-nor.png') center center no-repeat;
+            &:hover {
+                background: url('../assets/images/bg-btn-pre-in.png') center center no-repeat;
+                background-size: 100% 100%;
+            }
+            background-size: 100% 100%;
+            margin-right: 30px;
+        }
+        .next-step-btn {
+            display: inline-block;
+            width: 120px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            cursor: pointer;
+            background: url('../assets/images/bg-btn-next-nor.png') center center no-repeat;
+            background-size: 100% 100%;
+            &:hover {
+                background: url('../assets/images/bg-btn-next-in.png') center center no-repeat;
+                background-size: 100% 100%;
+            }
+            &.step-btn-disable {
+                background: url('../assets/images/bg-btn-next-disable.png') center center no-repeat;
+                background-size: 100% 100%;
+                cursor: not-allowed;
+                &:hover {
+                    background: url('../assets/images/bg-btn-next-disable.png') center center no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .ivu-table-wrapper {
+        &.compare-file-table {
+            .ivu-table {
+                &.ivu-table-stripe {
+                    .ivu-table-body {
+                        tr {
+                            &:nth-child(2n) {
+                                td {
+                                    height: 48px;
+                                    line-height: 48px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ivu-table-header {
+                    th {
+                        height: 48px;
+                    }
+                }
+                .ivu-table-body {
+                    .ivu-table-tbody {
+                        tr {
+                            td {
+                                height: 48px;
+                                line-height: 48px;
+                                .ivu-table-cell {
+                                    div {
+                                        height: 48px;
+                                        line-height: 48px;
+                                        span {
+                                            height: 48px;
+                                            line-height: 48px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .ivu-table-tip {
+                    height: 480px;
+                    table {
+                        tbody {
+                            tr {
+                                td {
+                                    height: 480px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ivu-spin-fix {
+                height: 480px;
+            }
+        }
+    }
+    .compare-btn-container {
+        .pre-step-btn {
+            display: inline-block;
+            width: 120px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            cursor: pointer;
+            background: url('../assets/images/bg-btn-pre-nor.png') center center no-repeat;
+            background-size: 100% 100%;
+            &:hover {
+                background: url('../assets/images/bg-btn-pre-in.png') center center no-repeat;
+                background-size: 100% 100%;
+            }
+            margin-right: 30px;
+        }
+        .next-step-btn {
+            display: inline-block;
+            width: 120px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            cursor: pointer;
+            background: url('../assets/images/bg-btn-next-nor.png') center center no-repeat;
+            background-size: 100% 100%;
+            &:hover {
+                background-size: 100% 100%;
+                background: url('../assets/images/bg-btn-next-in.png') center center no-repeat;
+            }
+            &.step-btn-disable {
+                background: url('../assets/images/bg-btn-next-disable.png') center center no-repeat;
+                background-size: 100% 100%;
+                cursor: not-allowed;
+                &:hover {
+                    background: url('../assets/images/bg-btn-next-disable.png') center center no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+}
+
+// dialog弹出框
+.el-dialog__wrapper {
+    background-color: rgba(49, 63, 91, 0.25);
+    &.vm-dialog {
+        .el-dialog {
+            width: 24%;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 0px 8px 5px rgba(87, 87, 87, 0.7);
+            -moz-box-shadow: 0px 0px 8px 5px rgba(87, 87, 87, 0.7);
+            box-shadow: 0px 0px 8px 5px rgba(87, 87, 87, 0.7);
+        }
+    }
+    .el-dialog__header {
+        height: 55px;
+        line-height: 55px;
+        padding: 0 !important;
+        .el-dialog__title {
+            display: inline-block;
+            margin-left: 20px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333e5c;
+            padding-left: 10px;
+            border-left: 2px solid #42a0f8;
+        }
+        .el-dialog__headerbtn {
+            top: 0;
+            font-size: 20px;
+            .el-icon-close {
+                color: #bbcad9;
+            }
+        }
+    }
+    .el-dialog__body {
+        padding: 0;
+        .table-sure-btn {
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: right;
+            font-size: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            &.el-form-item {
+                padding: 0 20px 20px 20px;
+                margin-bottom: 0;
+                .el-form-item__content {
+                    line-height: normal;
+                    font-size: 0;
+                }
+            }
+            .el-button {
+                height: 32px;
+                line-height: 32px;
+                &.el-button--mini {
+                    padding: 0 22px;
+                }
+                &.el-button--primary {
+                    background-color: #42a0f8;
+                    color: #fff;
+                }
+                &.el-button--default {
+                    background-color: #f5f5f5;
+                    color: #333e5c;
+                    border: 1px solid #d9dada;
+                }
+            }
+        }
+    }
+}
+
+::-webkit-input-placeholder {
+    color: #c2cade;
+}
+
+:-moz-placeholder {
+    color: #c2cade;
+}
+
+::-moz-placeholder {
+    color: #c2cade;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(255, 255, 255, 0.15);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+// 去掉chrome记住密码后输入框自动填充的背景色
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
